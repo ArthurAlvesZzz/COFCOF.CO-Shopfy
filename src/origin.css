@@ -1,0 +1,114 @@
+/* --- Origin Specific Styles --- */
+.orig-map-wrap {
+  position: relative;
+  background: var(--black);
+  border: 1px solid var(--rule-w);
+  overflow: hidden;
+}
+.orig-map-panel {
+  display: flex;
+  flex-direction: column;
+  background: var(--black);
+}
+@media (min-width: 1024px) {
+  .orig-map-panel {
+    border-right: 1px solid var(--rule-w);
+  }
+}
+.orig-map-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.orig-filter-btn {
+  padding: 6px 12px;
+  border-radius: 40px;
+  font-family: var(--fl);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: 1px solid var(--rule-w);
+  background: var(--black);
+  color: var(--clay);
+  transition: all 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.orig-filter-btn.active {
+  background: var(--sand);
+  color: var(--black);
+  border-color: var(--sand);
+}
+.orig-filter-btn:hover:not(.active) {
+  border-color: var(--clay);
+  color: var(--sand);
+}
+.orig-filter-btn span {
+  font-size: 8px;
+  background: rgba(0,0,0,0.2);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.orig-filter-btn.active span {
+  background: rgba(255,255,255,0.2);
+}
+
+.orig-farm-card {
+  border: 1px solid var(--rule-w);
+  background: var(--black);
+  padding: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.orig-farm-card.selected {
+  border-color: var(--clay);
+}
+.orig-farm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2px;
+  background: var(--rule-w);
+  border: 1px solid var(--rule-w);
+}
+.orig-farm-i {
+  background: var(--black);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s;
+}
+
+/* Map Overrides */
+.leaflet-container { 
+  background: var(--black) !important; 
+  font-family: var(--fn) !important; 
+}
+.custom-pin-marker:hover { 
+  transform: scale(1.15) translateY(-4px) !important; 
+  background-color: var(--sand) !important; 
+  color: var(--black) !important; 
+  border-color: var(--black) !important;
+}
+.leaflet-control-zoom { 
+  border: 1px solid var(--rule-w) !important; 
+  box-shadow: none !important; 
+  border-radius: 0 !important; 
+  overflow: hidden; 
+  margin-bottom: 24px !important; 
+  margin-right: 24px !important; 
+}
+.leaflet-control-zoom a { 
+  background-color: var(--black) !important; 
+  color: var(--sand) !important; 
+  transition: all 0.2s !important; 
+  border: none !important; 
+  border-bottom: 1px solid var(--rule-w) !important;
+}
+.leaflet-control-zoom a:hover { 
+  background-color: var(--rule-w) !important; 
+  color: var(--clay) !important; 
+}
