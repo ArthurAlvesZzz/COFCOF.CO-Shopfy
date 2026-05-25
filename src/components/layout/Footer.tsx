@@ -27,46 +27,38 @@ export default function Footer() {
               </div>
             )}
           </div>
-          <div className="ft-col">
-            <div className="eyebrow" style={{ opacity: 0.7 }}>Assinatura</div>
-            <ul style={{ fontSize: '16px' }}>
-              {!isOndeEncontrar && (
-                <>
+          {!isOndeEncontrar && (
+            <>
+              <div className="ft-col">
+                <div className="eyebrow" style={{ opacity: 0.7 }}>Assinatura</div>
+                <ul style={{ fontSize: '16px' }}>
                   <li><Link to="/assinaturas" className="lnk">Planos</Link></li>
                   <li><Link to="/cafes" className="lnk">Nossos cafés</Link></li>
                   <li><Link to="/para-empresas" className="lnk" style={isB2B ? { color: 'var(--sand)', fontWeight: 600 } : {}}>Empresas</Link></li>
-                </>
-              )}
-            </ul>
-          </div>
-          <div className="ft-col">
-            <div className="eyebrow" style={{ opacity: 0.7 }}>Institucional</div>
-            <ul style={{ fontSize: '16px' }}>
-              {!isOndeEncontrar && (
-                <>
+                </ul>
+              </div>
+              <div className="ft-col">
+                <div className="eyebrow" style={{ opacity: 0.7 }}>Institucional</div>
+                <ul style={{ fontSize: '16px' }}>
                   <li><Link to="/origem" className="lnk">Origem</Link></li>
                   <li><Link to="/onde-nos-encontrar" className="lnk">Onde Encontrar</Link></li>
                   <li><Link to="/contato" className="lnk">Contato</Link></li>
                   {isB2B && (
                     <li><a href="https://wa.me/5534998728882?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener noreferrer" className="lnk" style={{ color: 'var(--sand)', fontWeight: 600 }}>Solicitar Proposta B2B</a></li>
                   )}
-                </>
-              )}
-            </ul>
-          </div>
-          <div className="ft-col">
-            <div className="eyebrow" style={{ opacity: 0.7 }}>Contato</div>
-            <ul style={{ fontSize: '16px' }}>
-              {!isOndeEncontrar && (
-                <>
+                </ul>
+              </div>
+              <div className="ft-col">
+                <div className="eyebrow" style={{ opacity: 0.7 }}>Contato</div>
+                <ul style={{ fontSize: '16px' }}>
                   <li><a href="https://wa.me/5534998728882" target="_blank" rel="noopener noreferrer" className="lnk" style={isB2B ? { color: 'var(--sand)', fontWeight: 700 } : {}}>+55 34 99872-8882</a></li>
                   {isB2B && <li><a href="mailto:comercial@cofcof.co" className="lnk" style={{ color: 'var(--sand)' }}>comercial@cofcof.co</a></li>}
                   {!isB2B && <li><a href="mailto:contato@cofcof.co" className="lnk">contato@cofcof.co</a></li>}
                   <li><a href="https://instagram.com/cofcof.company" target="_blank" rel="noopener noreferrer" className="lnk">@cofcof.company</a></li>
-                </>
-              )}
-            </ul>
-          </div>
+                </ul>
+              </div>
+            </>
+          )}
         </div>
         <div className="ft-bottom">
           <div className="ft-legal">Cof Cof Cafés Especiais do Cerrado LTDA · CNPJ 52.639.486/0001-06<br />Patrocínio / MG · Cerrado Mineiro · Seg–Sex 8h–17h</div>
